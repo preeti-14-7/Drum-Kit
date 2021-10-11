@@ -14,6 +14,8 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
 }
 
+//for keyboard buttons 
+
 document.addEventListener("keypress", function(event) {
 
   makeSound(event.key);
@@ -23,6 +25,7 @@ document.addEventListener("keypress", function(event) {
 });
 
 
+//for sounds 
 function makeSound(key) {
 
   switch (key) {
@@ -67,11 +70,13 @@ function makeSound(key) {
   }
 }
 
+//for animation of buttons 
 
 function buttonAnimation(currentKey) {
 
   var activeButton = document.querySelector("." + currentKey);
 
+  //pressed property are deisgned in css 
   activeButton.classList.add("pressed");
 
   setTimeout(function() {
